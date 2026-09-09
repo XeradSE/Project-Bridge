@@ -20,10 +20,13 @@
         nodejs_26
         ionic-cli
         android-studio
+        jdk21
       ];
 
       shellHook = ''
         export CAPACITOR_ANDROID_STUDIO_PATH="${pkgs.android-studio}/bin/android-studio"
+        export _JAVA_AWT_WM_NONREPARENTING=1
+        export JAVA_HOME="${pkgs.jdk21}/lib/openjdk"
       '';
     };
   };
